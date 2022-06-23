@@ -2,9 +2,14 @@ import React, {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBarComp from "./Components/NavBarComp/NavBarComp";
 import Home from "./Components/Home";
-import World from "./Components/World";
+
 import { BrowserRouter as Router, Route, Path, Routes } from "react-router-dom";
 import Technology from "./Components/Technology";
+import Business from "./Components/Business";
+import Health from "./Components/Health";
+import Science from "./Components/Science";
+import Entertainment from "./Components/Entertainment";
+import Sports from "./Components/Sports";
 
 function App(props) {
   const [newsURL, setNewsURL]  = useState({});
@@ -24,12 +29,18 @@ function App(props) {
   };
   return (
     <div>
+        
       <Router>
-        <NavBarComp />
+      <NavBarComp />
         <Routes>
           <Route path="/" element ={<Home url={url} />} />
-          <Route path="/world" element ={<World url={url} />} />
+          
           <Route path="/technology" element ={<Technology url={url} />} />
+          <Route path="/business" element= {<Business/>} />
+          <Route path="/science" element= {<Science/>} />
+          <Route path="/health" element= {<Health/>} />
+          <Route path="/entertainment" element= {<Entertainment/>} />
+          <Route path="/sports" element ={<Sports url={url} />} />
         </Routes>
 
         

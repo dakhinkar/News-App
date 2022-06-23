@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import { Container, Col, Row, Spinner } from "react-bootstrap";
+import axios from "axios";
 import DynamicCard from "./DynamicCard/DynamicCard";
-function Business() {
-  const [businessNews, setBusinessNews] = useState([]);
-  //   const getUrl = url.url + "?category=" + url.apiKey;
 
+function Science() {
+  const [scienceNews, setScienceNews] = useState([]);
   useEffect(() => {
     axios
       .get(
-        "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=b0e90a8e8ae84f938024b373b63b29e2"
+        "https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=b0e90a8e8ae84f938024b373b63b29e2"
       )
-      .then((res) => setBusinessNews(res.data.articles))
+      .then((res) => setScienceNews(res.data.articles))
       .catch((err) => console.log(err));
   }, []);
-  console.log(businessNews);
+
   return (
     <div>
       <Container>
@@ -22,11 +21,11 @@ function Business() {
           <Col>
             <br />
             <hr />
-            <h1>Business News</h1>
+            <h1>Science News</h1>
             <hr />
-            {businessNews.length ? (
+            {scienceNews.length ? (
               <div>
-                {businessNews.map((data, index) => (
+                {scienceNews.map((data, index) => (
                   <DynamicCard newsData={data} key={index} />
                 ))}
               </div>
@@ -56,4 +55,4 @@ function Business() {
   );
 }
 
-export default Business;
+export default Science;

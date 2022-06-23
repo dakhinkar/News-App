@@ -4,7 +4,7 @@ import { Card, Button } from "react-bootstrap";
 
 
 function DynamicCard({ newsData }) {
- console.log(newsData);
+//  console.log(newsData);
  const {author, content, description,publishedAt, source, title, url, urlToImage} = newsData;
   return (
     <Card >

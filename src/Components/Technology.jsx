@@ -10,7 +10,7 @@ function Technology({ url }) {
   useEffect(() => {
     axios
       .get(
-        "https://newsapi.org/v2/top-headlines?category=technology&apiKey=b0e90a8e8ae84f938024b373b63b29e2"
+        "https://newsapi.org/v2/top-headlines?category=technology&apiKey=b0e90a8e8ae84f938024b373b63b29e2"  
       )
       .then((res) => setTechnologyNews(res.data.articles))
       .catch((err) => console.log(err));
