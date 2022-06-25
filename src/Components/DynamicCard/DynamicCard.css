@@ -1,20 +1,23 @@
-.card{
-    flex-direction: row;
-    margin-top: 2.0rem;
-
+.card {
+  flex-direction: row;
+  padding: 18px;
+  margin-top: 2rem;
+  background-color: aliceblue;
+  border: 3px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.75rem;
 }
-
-.card-body{
-    width: 100%;
+.card-header {
+  background-color: lightgrey;
 }
-.card-img{
-    width: 16rem;
-    padding: 0.5rem;
-   text-align: center;
-   vertical-align: middle;
- 
+.card-body {
+  width: 100%;
 }
-.card-img img{
-    height: 70%;
-    
+.card-img {
+  width: 16rem;
+  padding: 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.card-img img {
+  height: 70%;
 }

@@ -1,0 +1,31 @@
+
+.footerContainer{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin-top: 30px;
+}
+
+.footer-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+.nav-link{
+    display: inline;
+    color: white;
+   
+}
+.nav-link:hover{
+    color: blue;
+}
+
+.icon{
+    margin: 0 10px;
+    cursor: pointer;
+}
+.icon:hover{
+    font-weight: bold;
+    color: blue;
+}
